@@ -48,7 +48,7 @@ public class Inventario {
                 return true;
             }
         }
-
+// caso não ache o item ser recusado
         System.out.println("Inventário cheio, sem slot disponível para: " + novoItem.getnome());
         return false;
     }
@@ -70,7 +70,7 @@ public class Inventario {
             
             System.out.println(p.getNome() + " consumiu [" + itemSelecionado.getnome() + "] do slot " + indice + " e recuperou " + cura + " pontos de vida.");
             
-            // Esvazia o slot após o uso
+            // o item sair do inventario apos  o uso
             this.itens[indice] = null;
         } else {
             System.out.println("O slot " + indice + " está vazio!");
