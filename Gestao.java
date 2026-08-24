@@ -24,19 +24,19 @@ public class Gestao {
 
     public boolean recrutarMembro(Personagem novoMembro) {
         if (novoMembro == null) {
-            System.out.println("Membro inválido.");
+            System.out.println("Membro inválido.");//as informações não podem esta vazias
             return false;
         }
 
         for (int i = 0; i < this.membros.length; i++) {
-            if (this.membros[i] == null) {
+            if (this.membros[i] == null) { //se o espaço na lista estive vazio vai adiciona o novo membro
                 this.membros[i] = novoMembro;
                 System.out.println(novoMembro.getNome() + " entrou para a guilda " + this.nome + " no slot " + i);
                 return true; // Recrutado com sucesso
             }
         }
 
-        System.out.println("A guilda " + this.nome + " está cheia! Não foi possível recrutar " + novoMembro.getNome());
+        System.out.println("A guilda " + this.nome + " está cheia! Não foi possível recrutar " + novoMembro.getNome());// se a lista estive cheia não ira entra na lista
         return false;
     }
 
@@ -44,12 +44,12 @@ public class Gestao {
         System.out.println("==== Membros da guilda " + this.nome.toUpperCase() + " ====");
         for (int i = 0; i < this.membros.length; i++) {
             if (this.membros[i] != null) {
-                System.out.println("Slot " + i + ": " + this.membros[i].getNome() + " - Nível: " + this.membros[i].getNivel());
+                System.out.println("Slot " + i + ": " + this.membros[i].getNome() + " - Nível: " + this.membros[i].getNivel());// mostra as informações desse membro na lista
             }
         }
     }
 
-    public int calcularPoderTotal() {
+    public int calcularPoderTotal() { 
         int somaNiveis = 0;
         for (int i = 0; i < this.membros.length; i++) {
             if (this.membros[i] != null) {
