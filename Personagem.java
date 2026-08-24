@@ -1,6 +1,6 @@
 package Guildatech;
 
-public class Personagem {
+public class Personagem {// criado as informações base dos personagens
     private String nome;
     private int nivel;
     private int hpAtual;
@@ -38,7 +38,7 @@ public class Personagem {
     public void setHpAtual(int valor) {
         if (valor <= 0) {
             this.hpAtual = 0;
-            System.out.println(this.nome + " foi derrotado em combate!");
+            System.out.println(this.nome + " foi derrotado em combate!");// caso o hp chegue a 0 ou menos que isso o personagem sera derrotado
         } else if (valor > this.hpMaximo) {
             this.hpAtual = this.hpMaximo;
         } else {
@@ -53,6 +53,6 @@ public class Personagem {
         alvo.setHpAtual(alvo.getHpAtual() - danoBase);
         
        
-        System.out.println(this.nome + " executou um ataque especial em " + alvo.getNome() + " e causou " + danoBase + " de dano!");
+        System.out.println(this.nome + " executou um ataque especial em " + alvo.getNome() + " e causou " + danoBase + " de dano!"); //mostra o dano tomado pelo personagen
     }
 }
