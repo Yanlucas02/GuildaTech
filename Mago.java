@@ -21,7 +21,7 @@ public class Mago extends Personagem {
     public void executarAtaqueEspecial(Personagem p) {
         int custoMana = 10;
 
-        if (this.mana >= custoMana) {
+        if (this.mana >= custoMana) {//definido pra gasta mana quando for faze o ataque
             this.mana -= custoMana;
             int danoMagico = 20;
 
@@ -29,9 +29,9 @@ public class Mago extends Personagem {
             p.setHpAtual(p.getHpAtual() - danoMagico);
 
             // Imprime a mensagem da ação
-            System.out.println(getNome() + " lançou uma magia em " + p.getNome() + " causando " + danoMagico + " de dano mágico! Mana restante: " + this.mana);
+            System.out.println(getNome() + " lançou uma magia em " + p.getNome() + " causando " + danoMagico + " de dano mágico! Mana restante: " + this.mana); // caso o mago tenha mana o suficiente o ataca ira acontecer
         } else {
-            System.out.println(getNome() + " tentou atacar, mas não possui mana suficiente! Mana atual: " + this.mana);
+            System.out.println(getNome() + " tentou atacar, mas não possui mana suficiente! Mana atual: " + this.mana); //caso não o ataca sera cancelado
         }
     }
 }
