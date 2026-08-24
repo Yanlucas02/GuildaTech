@@ -1,6 +1,7 @@
 package Guildatech;
 
-public class Item {
+public class Item { //criado como sera as informações do item pra pode usa em outra classe
+	
 
 	private String nome;
 	private int peso;
